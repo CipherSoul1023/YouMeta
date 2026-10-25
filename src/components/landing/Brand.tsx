@@ -1,0 +1,1 @@
+export function Brand() { return <a href="#top" className="brand" aria-label="YouMeta homepage"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>YouMeta<span className="brand-dot">.</span></span></a>; }

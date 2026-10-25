@@ -1,0 +1,4 @@
+import { useState } from "react";
+import { Brand } from "./Brand";
+type Props = { onStart: () => void };
+export function Navbar({ onStart }: Props) { const [open, setOpen] = useState(false); const close = () => setOpen(false); return <header className="site-header" id="top"><nav className="container nav" aria-label="Main navigation"><Brand /><div id="nav-links" className={`nav-links ${open ? "open" : ""}`}><a href="#how" onClick={close}>How it works</a><a href="#explore" onClick={close}>Try a little discovery</a><a href="#about" onClick={close}>Our approach</a></div><button type="button" className="btn btn-purple nav-cta" onClick={onStart}>Get started <span className="arrow" aria-hidden="true">↗</span></button><button type="button" className="menu-toggle" aria-controls="nav-links" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} onClick={() => setOpen(!open)}>{open ? "×" : "☰"}</button></nav></header>; }
